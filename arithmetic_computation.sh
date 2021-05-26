@@ -32,3 +32,6 @@ echo "Array storage: ${array[*]}"
 IFS=$'\n'          
 desc_array=( $(printf "%s\n" ${array[@]} | sort -nr ) )  
 echo "Descending order: ${desc_array[*]}"
+
+asc_array=( $(printf "%s\n" ${array[@]} | sort -n ) )  
+echo "Ascending order: ${asc_array[*]}"
