@@ -21,3 +21,11 @@ echo "Result4: $result4"
 dict["4"]=$result4
 
 echo "Dictionary storage: ${dict[*]}"
+
+declare -a array=()
+for(( i=1;i<=${#dict[*]};i++ ))
+do
+	array+=(${dict[$i]})
+done	
+echo "Array storage: ${array[*]}"
+
