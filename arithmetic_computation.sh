@@ -29,3 +29,6 @@ do
 done	
 echo "Array storage: ${array[*]}"
 
+IFS=$'\n'          
+desc_array=( $(printf "%s\n" ${array[@]} | sort -nr ) )  
+echo "Descending order: ${desc_array[*]}"
